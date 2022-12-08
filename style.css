@@ -1,0 +1,84 @@
+/* @import url(); */
+
+/* Custom CSS Variables */
+:root{
+    /* Colors */
+   --WHITE: hsl(0,0%,100%);
+   --LITE--GRAY: hsl(212,45%,89%);
+   --GRAYISH--BLUE: hsl(220,15%,55%);
+   --DARK--BLUE: hsl(218,44%,22%);
+   --GRAYISH--BLUE--A: hsla(220,15%,55%,0.4);
+   
+   /* Fonts */
+   --P--FONTS: 15px;
+   /* --FAMILY: Outfit; */
+   --LITE--WEIGHT: 400;
+   --BOLD--WEIGHT: 700; 
+   
+   /* Layouts */
+   --MOBILE: 375px;
+   --DESKTOP: 1440p;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: var(--LITE--GRAY);
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    font-size: var(--P--FONTS);
+    /* font-family: var(); */
+}
+
+.card{
+    width: var(--MOBILE);
+    background-color: var(--WHITE);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 8.5px 35px var(--GRAYISH--BLUE--A);
+}
+
+img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.card__component{
+    padding: 20px;
+    text-align: center;
+}
+
+
+.card__title{
+    font-weight: var(--BOLD--WEIGHT);
+    margin-bottom: 20px;
+    line-height: 1.5;
+    color: var(--DARK--BLUE);
+}
+
+.card__quote{
+    font-weight: var(--LITE--WEIGHT);
+    color: var(--GRAYISH--BLUE);
+}
+
+
+/* Mobile Layout */
+@media (max-width : 375px){
+    body{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-around;
+        width: 100%;
+        align-items: center;
+        font-family: sans-serif;
+    }
+
+    .card{
+        width: 87%;
+    }
+}
