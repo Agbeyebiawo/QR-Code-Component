@@ -1,5 +1,7 @@
-/* @import url(); */
-
+@font-face {
+    font-family: Outfit;
+    src: url(Outfit/Outfit-VariableFont_wght.ttf);
+}
 /* Custom CSS Variables */
 :root{
     /* Colors */
@@ -11,7 +13,7 @@
    
    /* Fonts */
    --P--FONTS: 15px;
-   /* --FAMILY: Outfit; */
+   --FAMILY: Outfit;
    --LITE--WEIGHT: 400;
    --BOLD--WEIGHT: 700; 
    
@@ -19,6 +21,8 @@
    --MOBILE: 375px;
    --DESKTOP: 1440p;
 }
+
+
 
 *{
     box-sizing: border-box;
@@ -32,7 +36,7 @@ body{
     display: grid;
     place-items: center;
     font-size: var(--P--FONTS);
-    /* font-family: var(); */
+    font-family: var(--FAMILY);
 }
 
 .card{
